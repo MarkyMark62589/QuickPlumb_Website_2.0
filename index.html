@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>QuickPlumb Pro — Plumbing design software for contractors</title>
+<meta name="description" content="QuickPlumb Pro draws the plumbing, sizes the pipe to IPC and UPC methods, locates every stub-up on slab, and counts every fitting. Free 30-day trial for Windows.">
+<link rel="canonical" href="https://www.quickplumb.com/">
+<meta property="og:title" content="QuickPlumb Pro — Plumbing design software for contractors">
+<meta property="og:description" content="Draw the plumbing, size the pipe, locate every stub-up, count every fitting. Free 30-day trial for Windows.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.quickplumb.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ══ HEADER ══════════════════════════════════════════════════════════ -->
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="/">
+      <span class="brand__mk">Quick<em>Plumb</em></span>
+      <span class="brand__sub">Pro 5.0</span>
+    </a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="nav">
+      <a href="#features">What it does</a>
+      <a href="#see">Screens</a>
+      <a href="#pricing">Pricing</a>
+      <a href="https://www.quickplumb.com/contact-us/">Support</a>
+      <a class="btn btn--go btn--sm" href="https://www.quickplumb.com/start-trial/">Free trial</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ══ HERO ════════════════════════════════════════════════════════════ -->
+<section class="wrap hero">
+ <div class="hero__grid">
+
+  <div>
+    <p class="eyebrow">Plumbing design software for Windows</p>
+    <h1 class="h1">Get it right<br>before the<br>concrete pours.</h1>
+    <p class="lede">QuickPlumb Pro draws the plumbing, sizes the pipe, pins every stub-up to the edge of the forms, and counts every last fitting — so the job comes together exactly the way you drew it.</p>
+    <div class="btnrow">
+      <a class="btn btn--go" href="https://www.quickplumb.com/start-trial/">Start 30-day free trial</a>
+      <a class="btn btn--line" href="#see">See the screens</a>
+    </div>
+    <p class="hero__specs">
+      <span>Windows 11 · 10 · 8</span>
+      <span>300 MB disk</span>
+      <span>Full version for 30 days</span>
+    </p>
+  </div>
+
+  <!-- Signature element: a DWV riser diagram that draws itself,
+       the way QuickPlumb plots an isometric. -->
+  <div class="sheet">
+    <span class="sheet__tag">Riser diagram · not to scale</span>
+    <svg viewBox="0 0 780 560" role="img" aria-label="Isometric drain-waste-vent riser diagram with copper water supply, annotated with pipe sizes.">
+      <defs>
+        <pattern id="g" width="26" height="26" patternUnits="userSpaceOnUse">
+          <path d="M26 0H0v26" fill="none" stroke="rgba(255,255,255,.055)" stroke-width="1"/>
+        </pattern>
+      </defs>
+      <rect width="780" height="560" fill="url(#g)"/>
+
+      <!-- floor datums -->
+      <g class="fade" style="animation-delay:.1s">
+        <path class="d-thin" stroke-dasharray="7 7" d="M34 215h712M34 345h712"/>
+        <path class="d-thin" d="M34 482h712"/>
+        <text class="d-lbl d-min" x="38" y="208" opacity=".75">2ND FLR</text>
+        <text class="d-lbl d-min" x="38" y="338" opacity=".75">1ST FLR</text>
+        <text class="d-lbl d-min" x="38" y="475" opacity=".75">SLAB</text>
+      </g>
+
+      <!-- roof + vent through roof -->
+      <g class="fade" style="animation-delay:.45s">
+        <path class="d-thin" stroke-width="1.6" d="M296 96h208"/>
+        <path class="d-thin" d="M304 96l-8 9M328 96l-8 9M352 96l-8 9M440 96l-8 9M464 96l-8 9M488 96l-8 9"/>
+      </g>
+
+      <!-- building drain to sewer -->
+      <path class="d-dwv draw" style="stroke-dasharray:270;stroke-dashoffset:270;animation-delay:.15s" d="M400 470L140 512"/>
+      <path class="d-dwv fade" style="animation-delay:1.2s" d="M155 505l-15 7 14 6"/>
+
+      <!-- soil stack -->
+      <path class="d-dwv draw" style="stroke-dasharray:430;stroke-dashoffset:430;animation-delay:.4s" d="M400 470V44"/>
+
+      <!-- lower branch, right -->
+      <path class="d-dwv draw" style="stroke-dasharray:215;stroke-dashoffset:215;animation-delay:.75s" d="M400 380l28-28h172"/>
+      <!-- upper branch, left -->
+      <path class="d-dwv draw" style="stroke-dasharray:200;stroke-dashoffset:200;animation-delay:.9s" d="M400 250l-28-28H215"/>
+
+      <!-- vents -->
+      <path class="d-vent draw" style="stroke-dasharray:420;stroke-dashoffset:420;animation-delay:1.15s" d="M600 352V145l-25-25H400"/>
+      <path class="d-vent draw" style="stroke-dasharray:250;stroke-dashoffset:250;animation-delay:1.3s" d="M215 222v-51l25-25h160"/>
+
+      <!-- fixtures, lower floor -->
+      <g class="fade" style="animation-delay:1.35s">
+        <path class="d-fix" d="M480 352v-23M528 352v-21M578 352v-21"/>
+        <circle class="d-fix" cx="480" cy="318" r="11"/>
+        <rect class="d-fix" x="517" y="319" width="22" height="12" rx="1"/>
+        <rect class="d-fix" x="564" y="317" width="28" height="14" rx="2"/>
+        <text class="d-lbl d-min" x="480" y="299" text-anchor="middle">WC</text>
+        <text class="d-lbl d-min" x="528" y="312" text-anchor="middle">LAV</text>
+        <text class="d-lbl d-min" x="578" y="308" text-anchor="middle">TUB</text>
+      </g>
+      <!-- fixtures, upper floor -->
+      <g class="fade" style="animation-delay:1.5s">
+        <path class="d-fix" d="M310 222v-22M262 222v-20"/>
+        <circle class="d-fix" cx="310" cy="188" r="11"/>
+        <rect class="d-fix" x="251" y="190" width="22" height="12" rx="1"/>
+      </g>
+
+      <!-- copper water supply -->
+      <path class="d-sup draw" style="stroke-dasharray:375;stroke-dashoffset:375;animation-delay:1.55s" d="M760 505h-80V190"/>
+      <g class="fade" style="animation-delay:1.95s">
+        <path class="d-sup" d="M680 190h62M680 392h62M680 455h26"/>
+        <circle class="d-sup" cx="726" cy="455" r="17"/>
+        <text class="d-lbl d-lbl-c" x="726" y="459" text-anchor="middle">WH</text>
+      </g>
+
+      <!-- annotations -->
+      <g class="fade" style="animation-delay:2.15s">
+        <path class="d-thin" d="M392 430h-42"/>
+        <text class="d-lbl" x="344" y="434" text-anchor="end">3&#8243; SOIL STACK</text>
+        <text class="d-lbl" x="146" y="536">4&#8243; BUILDING DRAIN</text>
+        <text class="d-lbl d-min" x="614" y="252">2&#8243; VENT</text>
+        <path class="d-thin d-min" d="M214 248l26-24"/>
+        <text class="d-lbl d-min" x="208" y="254" text-anchor="end">1&#189;&#8243; TRAP ARM</text>
+        <text class="d-lbl d-lbl-c" x="666" y="175" text-anchor="end">&#190;&#8243; SUPPLY</text>
+        <text class="d-lbl" x="414" y="50">VTR</text>
+      </g>
+    </svg>
+  </div>
+
+ </div>
+</section>
+
+<!-- ══ LEGEND / FEATURES ═══════════════════════════════════════════════ -->
+<section class="wrap band" id="features">
+  <p class="eyebrow">Legend</p>
+  <h2 class="h2">Everything the drawing gives you</h2>
+  <p class="lede">Draw the job once. QuickPlumb pulls the sizing, the coordinates, the fittings and the numbers straight off your drawing.</p>
+
+  <div class="legend">
+
+    <div class="legend__row">
+      <div class="legend__sym"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z"/><path d="M4 9.5h16M9 5v14"/><path d="M12.5 15.5l3-3.5 4.5 5"/></svg></div>
+      <div>
+        <h3 class="legend__t">Import the floor plan</h3>
+        <p class="legend__d">Drop in the architect's plan — PDF or almost any image format — and use it as the backdrop for walls, fixtures and pipe.</p>
+      </div>
+    </div>
+
+    <div class="legend__row">
+      <div class="legend__sym"><svg viewBox="0 0 24 24"><circle cx="15.5" cy="14.5" r="4.5"/><path d="M3 14.5h7.5M15.5 21.5V19"/><path d="M3 11.5v6M12.5 21.5h6"/></svg></div>
+      <div>
+        <h3 class="legend__t">Stub-ups from the forms</h3>
+        <p class="legend__d">Highlight a fixture and dimension lines stretch from its drain connection to every reference line on the drawing. No more cutting concrete.</p>
+      </div>
+    </div>
+
+    <div class="legend__row">
+      <div class="legend__sym"><svg viewBox="0 0 24 24"><path d="M2 12h20M2 16h20"/><path d="M9 12V6M15 12V6M9 6h6"/><path d="M6 12v4M20 12v4"/></svg></div>
+      <div>
+        <h3 class="legend__t">Automatic fitting recognition</h3>
+        <p class="legend__d">Every fitting is recognised as you attach pipe. Tees, ells, couplings — counted as you draw, so you never show up short.</p>
+      </div>
+    </div>
+
+    <div class="legend__row">
+      <div class="legend__sym"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 17h18"/><path d="M12 7v10"/><path d="M9.5 9.5L12 7l2.5 2.5M9.5 14.5L12 17l2.5-2.5"/></svg></div>
+      <div>
+        <h3 class="legend__t">Auto water pipe sizing</h3>
+        <p class="legend__d">Enter the available pressure, hit Go, and watch QuickPlumb size the water distribution using accepted engineering practice based on the IPC and UPC.</p>
+      </div>
+    </div>
+
+    <div class="legend__row">
+      <div class="legend__sym"><svg viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12v9M4 7.5l8 4.5 8-4.5"/></svg></div>
+      <div>
+        <h3 class="legend__t">3D views and isometrics</h3>
+        <p class="legend__d">Switch between plan, front, side and iso. Orbit the model, print the isometric for the field, and hand inspectors the drawing they ask for.</p>
+      </div>
+    </div>
+
+    <div class="legend__row">
+      <div class="legend__sym"><svg viewBox="0 0 24 24"><path d="M2 4v16"/><path d="M6 6h10M6 11h10M6 16h10"/><path d="M19 6h2M19 11h2M19 16h2"/></svg></div>
+      <div>
+        <h3 class="legend__t">Bill of materials</h3>
+        <p class="legend__d">A materials list built from your drawing and your customer selections — printable, or uploaded to a participating supply house for a live quote.</p>
+      </div>
+    </div>
+
+    <div class="legend__row">
+      <div class="legend__sym"><svg viewBox="0 0 24 24"><path d="M2 9h20M2 15h20"/><path d="M8.5 5.5v13M15.5 5.5v13" stroke-dasharray="2.5 2.5"/></svg></div>
+      <div>
+        <h3 class="legend__t">Pipe cut list</h3>
+        <p class="legend__d">Pre-cut on the chop saw and match each numbered pipe to the same number on the printed drawing. Less waste, faster assembly.</p>
+      </div>
+    </div>
+
+    <div class="legend__row">
+      <div class="legend__sym"><svg viewBox="0 0 24 24"><path d="M3 5h13l5 7-5 7H3z"/><path d="M7 12h7"/></svg></div>
+      <div>
+        <h3 class="legend__t">Estimates with labor</h3>
+        <p class="legend__d">Quantities and prices from the drawing, plus labor from your own install times and hourly rate. Edit lines right on the estimate before it prints.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ FIGURES ═════════════════════════════════════════════════════════ -->
+<section class="wrap band" id="see" style="padding-top:0">
+  <p class="eyebrow">Plates</p>
+  <h2 class="h2">What it looks like</h2>
+
+  <div class="figs">
+    <figure class="fig" style="margin:0">
+      <div class="fig__vp"><p class="fig__ph">Screenshot<br>1200 × 900</p></div>
+      <figcaption class="fig__cap"><b>Fig. 1</b> — Plan view, fixtures on imported floor plan</figcaption>
+    </figure>
+    <figure class="fig" style="margin:0">
+      <div class="fig__vp"><p class="fig__ph">Screenshot<br>1200 × 900</p></div>
+      <figcaption class="fig__cap"><b>Fig. 2</b> — DWV isometric with pipe sizes shown</figcaption>
+    </figure>
+    <figure class="fig" style="margin:0">
+      <div class="fig__vp"><p class="fig__ph">Screenshot<br>1200 × 900</p></div>
+      <figcaption class="fig__cap"><b>Fig. 3</b> — Bill of materials and estimate</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ══ STORY ═══════════════════════════════════════════════════════════ -->
+<section class="story band">
+ <div class="wrap story__grid">
+  <div>
+    <p class="eyebrow">Who builds it</p>
+    <h2 class="h2">Written by people who<br>ran the pipe first.</h2>
+    <p style="margin-top:22px">Epiphany Software Corporation was started by people with plumbing design backgrounds, working alongside plumbing contractors. We know first-hand what goes wrong in the field and what goes wrong in the office.</p>
+    <p>Most software vendors overlook the problems that actually cost a plumbing contractor money — getting accurate coordinates for stub-ups in slab construction, counting fittings so nobody makes a supply-house run, keeping the field crew and the drawing in agreement. Those are the problems QuickPlumb was built to solve.</p>
+    <p>There is no substitute for proper planning. With QuickPlumb you can relax knowing the job will come together just as planned.</p>
+    <div class="btnrow">
+      <a class="btn btn--onslate" href="https://www.quickplumb.com/about-us/">More about us</a>
+    </div>
+  </div>
+
+  <div>
+    <blockquote class="quote">
+      <p class="quote__t">I love this program and have gotten very fast with it. I also have AutoCAD MEP 2012 and in the time it takes to set up a job I could be done with 3 jobs with yours.</p>
+      <p class="quote__a">— Jon P., QuickPlumb user</p>
+    </blockquote>
+    <h3 class="h3" style="font-size:15px;letter-spacing:.14em;font-family:var(--mono);font-weight:500">In the trade press</h3>
+    <ul class="press">
+      <li><a href="http://contractormag.com/feldmans/software-assists-piping-and-pumps">Contractor Magazine — software assists piping and pumps</a></li>
+      <li><a href="http://www.pmmag.com/articles/92527-quickplumb-cad-program">Plumbing &amp; Mechanical — the QuickPlumb CAD program</a></li>
+      <li><a href="http://www.pmengineer.com/">PM Engineer</a></li>
+    </ul>
+  </div>
+ </div>
+</section>
+
+<!-- ══ PRICING ═════════════════════════════════════════════════════════ -->
+<section class="wrap band" id="pricing">
+  <p class="eyebrow">Purchase options</p>
+  <h2 class="h2">Simple pricing</h2>
+  <p class="lede">Start with the full version free for 30 days. Subscribe when it has paid for itself.</p>
+
+  <div class="plans">
+
+    <div class="plan">
+      <h3 class="plan__n">Free trial</h3>
+      <p class="plan__p">$0</p>
+      <p class="plan__note">Full version · 30 days</p>
+      <ul class="plan__f">
+        <li>Import plans</li>
+        <li>Stack positions on slab</li>
+        <li>Fitting recognition</li>
+        <li>Auto pipe sizing</li>
+        <li>3D rendering and isometrics</li>
+        <li>Pipe cut list</li>
+        <li>Bill of materials and estimates</li>
+        <li>Expires after 30 days</li>
+      </ul>
+      <a class="btn btn--line" href="https://www.quickplumb.com/start-trial/">Download now</a>
+    </div>
+
+    <div class="plan plan--pick">
+      <span class="plan__flag">Most popular</span>
+      <h3 class="plan__n">Pro</h3>
+      <p class="plan__p">$29 <small>/ month</small></p>
+      <p class="plan__note">Billed monthly · cancel anytime</p>
+      <ul class="plan__f">
+        <li>Everything in the trial</li>
+        <li>Stack positions on slab</li>
+        <li>Fitting recognition</li>
+        <li>Auto pipe sizing</li>
+        <li>3D rendering and isometrics</li>
+        <li>Pipe cut list</li>
+        <li>Bill of materials and estimates</li>
+        <li class="is-add">Free updates</li>
+      </ul>
+      <a class="btn btn--go" href="https://www.quickplumb.com/checkout/?price_id%5B%5D=pri_01kdzj8s5k25tgbjv2a31kdp08&amp;qty%5B%5D=1">Subscribe to Pro</a>
+    </div>
+
+    <div class="plan">
+      <h3 class="plan__n">Plus</h3>
+      <p class="plan__p">$59 <small>/ month</small></p>
+      <p class="plan__note">Billed monthly · cancel anytime</p>
+      <ul class="plan__f">
+        <li>Everything in Pro</li>
+        <li>Free updates</li>
+        <li class="is-add">Export to AutoCAD in 3D</li>
+        <li class="is-add">Auto water pipe routing</li>
+      </ul>
+      <a class="btn btn--line" href="https://www.quickplumb.com/checkout/?price_id%5B%5D=pri_01kgwpyr3a2dj6m8g6v7j4t9h1&amp;qty%5B%5D=1">Subscribe to Plus</a>
+    </div>
+
+  </div>
+
+  <p class="plans__foot">
+    Prices in USD. Payments and invoicing handled by Paddle, our merchant of record.<br>
+    Already own a licence bought before the move to subscriptions?
+    <a href="https://www.quickplumb.com/transfer-legacy-quickplumb-license/">Transfer your legacy licence</a>.
+  </p>
+</section>
+
+<!-- ══ CTA ═════════════════════════════════════════════════════════════ -->
+<section class="story band">
+  <div class="wrap cta">
+    <p class="eyebrow eyebrow--c">Next step</p>
+    <h2 class="h2">Draw one job with it.</h2>
+    <p class="lede" style="color:#c8d0d6">The full version runs for 30 days. Import a plan you are already working on and see what the material list looks like.</p>
+    <div class="btnrow">
+      <a class="btn btn--go" href="https://www.quickplumb.com/start-trial/">Start 30-day free trial</a>
+      <a class="btn btn--onslate" href="https://www.quickplumb.com/system-requirements/">System requirements</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══ FOOTER — the title block ════════════════════════════════════════ -->
+<footer class="foot">
+ <div class="wrap">
+
+  <div class="foot__cols">
+    <div class="foot__col">
+      <p class="foot__h">Product</p>
+      <ul>
+        <li><a href="#features">What it does</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="https://www.quickplumb.com/start-trial/">Download trial</a></li>
+        <li><a href="https://www.quickplumb.com/system-requirements/">System requirements</a></li>
+        <li><a href="https://www.quickplumb.com/blog/">Release notes</a></li>
+      </ul>
+    </div>
+    <div class="foot__col">
+      <p class="foot__h">Support</p>
+      <ul>
+        <li><a href="https://www.quickplumb.com/contact-us/">Contact us</a></li>
+        <li><a href="mailto:support@quickplumb.com">support@quickplumb.com</a></li>
+        <li><a href="https://www.quickplumb.com/videos/">Video guides</a></li>
+        <li><a href="https://www.quickplumb.com/transfer-legacy-quickplumb-license/">Transfer a legacy licence</a></li>
+      </ul>
+    </div>
+    <div class="foot__col">
+      <p class="foot__h">Company</p>
+      <ul>
+        <li><a href="https://www.quickplumb.com/about-us/">About</a></li>
+        <li><a href="https://www.quickplumb.com/blog/">News</a></li>
+        <li><a href="legal/notices.html">Copyright &amp; trademark</a></li>
+      </ul>
+    </div>
+    <div class="foot__col">
+      <p class="foot__h">Legal</p>
+      <ul>
+        <li><a href="legal/terms.html">Terms of service</a></li>
+        <li><a href="legal/privacy.html">Privacy policy</a></li>
+        <li><a href="legal/refunds.html">Refund policy</a></li>
+        <li><a href="legal/eula.html">EULA</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- a real drawing title block -->
+  <dl class="tblock">
+    <div><dt>Project</dt><dd>QuickPlumb Pro</dd></div>
+    <div><dt>Release</dt><dd>5.0</dd></div>
+    <div><dt>Platform</dt><dd>Windows 11 / 10 / 8</dd></div>
+    <div><dt>Issued by</dt><dd>Epiphany Software Corp.</dd></div>
+    <div><dt>Revised</dt><dd>2026-07-30</dd></div>
+  </dl>
+
+  <div class="foot__fine">
+    <span>&copy; <span id="yr">2026</span> Epiphany Software Corporation. All rights reserved.</span>
+    <span>QuickPlumb&reg; is a registered trademark of Epiphany Software Corporation.</span>
+  </div>
+
+ </div>
+</footer>
+
+<script src="js/site.js" defer></script>
+</body>
+</html>

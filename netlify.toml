@@ -1,0 +1,50 @@
+# QuickPlumb Website 2.0 — Netlify configuration
+# Plain static HTML: no build step, publish from the repository root.
+
+[build]
+  publish = "."
+  command = ""
+
+# Pretty URLs: /pricing instead of /pricing.html
+[[redirects]]
+  from = "/terms"
+  to = "/legal/terms.html"
+  status = 301
+[[redirects]]
+  from = "/privacy"
+  to = "/legal/privacy.html"
+  status = 301
+[[redirects]]
+  from = "/refunds"
+  to = "/legal/refunds.html"
+  status = 301
+[[redirects]]
+  from = "/eula"
+  to = "/legal/eula.html"
+  status = 301
+
+# Send trial / checkout traffic to the WordPress licensing platform.
+# Change the destination if the licensing site moves.
+[[redirects]]
+  from = "/trial"
+  to = "https://www.quickplumb.com/start-trial/"
+  status = 302
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
